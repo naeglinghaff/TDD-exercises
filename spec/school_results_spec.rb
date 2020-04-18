@@ -14,9 +14,9 @@ describe 'calculate_results' do
       expect(calculate_results(input)).to eq("Green: 2")
     end
 
-    # it 'counts results of 2 item in string' do
-    #   input = "Green, Amber"
-    #   expect(calculate_results(input)).to eq("Green: 1\nAmber: 1")
-    # end
+    it 'counts results of 2 item in string' do
+      input = "Green, Amber"
+      expect(calculate_results(input)).to eq("Green: 1\nAmber: 1")
+    end
   end
 end
