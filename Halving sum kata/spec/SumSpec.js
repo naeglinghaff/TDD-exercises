@@ -17,4 +17,8 @@ describe('HalvingSum', () => {
     expect(calculate.sum(5)).toEqual(8);
   })
 
+  it('can calculate result for 10', () => {
+    expect(calculate.sum(10)).toEqual(18);
+  })
+
 })
