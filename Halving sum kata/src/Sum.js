@@ -4,6 +4,11 @@ class HalvingSum {
   }
 
   sum(int) {
-    return int
+    if (int === 1) {
+      return int;
+    } else {
+    let result = int + (int/2);
+    return result;
+    }
   }
 }
