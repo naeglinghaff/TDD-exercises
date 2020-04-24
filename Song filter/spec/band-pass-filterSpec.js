@@ -29,4 +29,9 @@ describe('Band Pass', () => {
     let bandPassFilter = new BandPassFilter([9, null], 10, 15);
     expect( function(){bandPassFilter.changeFrequency()}).toThrow('Error: corrupted file');
   })
+
+  it('can take a longer list of values', () => {
+    let bandPassFilter = new BandPassFilter([9, 10, 12, 18, 25], 10, 15);
+    expect(bandPassFilter.changeFrequency()).toEqual([10, 10, 12, 15, 15])
+  })
 })
