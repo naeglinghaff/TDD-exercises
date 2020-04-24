@@ -4,4 +4,9 @@ describe('Band Pass', () => {
     let bandPassFilter = new BandPassFilter([30], 22, 42);
     expect(bandPassFilter.changeFrequency()).toEqual([30]);
   })
+
+  it('has to round up 1 value', () => {
+    let bandPassFilter = new BandPassFilter([10], 40, 50);
+    expect(bandPassFilter.changeFrequency()).toEqual([40])
+  })
 })

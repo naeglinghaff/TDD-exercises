@@ -6,6 +6,10 @@ class BandPassFilter {
   }
 
   changeFrequency(){
-    return this._track;
+    if (this._track >= this._lowerRange && this._track <= this._upperRange) {
+      return this._track;
+    } else {
+      return [this._lowerRange];
+    }
   }
 }
