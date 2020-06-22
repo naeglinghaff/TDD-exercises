@@ -122,3 +122,21 @@ Don't try to refactor too soon. At first I didn't like the amount of if and else
 I also decided to forego some of my tests for the input examples that included 2 numbers as they passed automatically and didn't push the code on further.
 
 To improve next time I'd like to get some more practise of refactoring code.
+
+## Extraction Kata - Ruby
+
+Write a function that when given a URL as a string, parses out just the domain name and returns it as a string. For example:
+
+```
+domain_name("http://github.com/carbonfive/raygun") == "github"
+domain_name("http://www.zombie-bites.com") == "zombie-bites"
+domain_name("https://www.cnet.com") == "cnet"
+```
+
+| Input       | Output                  |
+|:------------- |:-------------        |
+| "www.free.com" | "free" |
+| "http://wwww.nothing.com" | "nothing" |
+| "http://www.nothing.co.uk" | "nothing" |
+| "https://www.nothing.com" | "nothing" |
+| "http://zen-desk.com" | "zen-desk" |
