@@ -7,4 +7,8 @@ describe "domain name"  do
     expect(domain_name(url)).to eq('free')
   end
 
+  it 'should return another string of the domain name' do
+    url = "www.nothing.com"
+    expect(domain_name(url)).to eq('nothing')
+  end
 end

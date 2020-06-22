@@ -1,3 +1,4 @@
 def domain_name(url)
-  "free"
+  result = url.split('.')
+  result[1]
 end
