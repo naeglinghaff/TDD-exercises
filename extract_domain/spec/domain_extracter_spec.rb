@@ -17,8 +17,8 @@ describe "domain name"  do
     expect(domain_name(url)).to eq('github')
   end
 
-  it 'should return domain names with http and www' do
-    url = "http://www.zombie-bites.com"
+  it 'should return domain names with .co.uk' do
+    url = "http://www.zombie-bites.co.uk"
     expect(domain_name(url)).to eq('zombie-bites')
   end
 end
