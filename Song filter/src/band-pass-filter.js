@@ -8,7 +8,7 @@ class BandPassFilter {
 
   changeFrequency(){
    for(var i = 0; i < this._track.length; i++){
-     if( this._track[i] === null){
+     if(this._track[i] === null){
        throw "Error: corrupted file";
      } else if (this._track[i] >= this._lowerRange && this._track[i] <= this._upperRange) {
        this._newArray.push(this._track[i]);
