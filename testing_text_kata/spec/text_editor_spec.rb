@@ -7,4 +7,9 @@ describe 'Text Editor' do
     input = []
     expect(text_editor(input)).to eq([])
   end
+
+  it 'should return the line number and corresponding string with one line' do
+    input = ["a"]
+    expect(text_editor(input)).to eq(["1: a"])
+  end
 end
