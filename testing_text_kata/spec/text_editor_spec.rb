@@ -17,4 +17,20 @@ describe 'Text Editor' do
     input = ["a", "b"]
     expect(text_editor(input)).to eq(["1: a", "2: b"])
   end
+
+  it "should return line number and string with 3 lines" do
+    input = ["a", "b", "c"]
+    expect(text_editor(input)).to eq(["1: a", "2: b", "3: c"])
+  end
+
+  it "should handle empty strings" do
+    input = ["", "", ""]
+    expect(text_editor(input)).to eq(["1: ", "2: ", "3: "])
+  end
+
+  it "should handle long input" do
+    input = ["puts \"Hello, world\"", "puts \"Hello, world\"", "puts \"Hello, world\"", "puts \"Hello, world\"", "puts \"Hello, world\"", "puts \"Hello, world\""]
+    expect(text_editor(input)).to eq(["1: puts \"Hello, world\"", "2: puts \"Hello, world\"", "3: puts \"Hello, world\"", "4: puts \"Hello, world\"", "5: puts \"Hello, world\"", "6: puts \"Hello, world\""])
+  end
+
 end
