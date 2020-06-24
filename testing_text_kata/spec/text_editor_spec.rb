@@ -12,4 +12,9 @@ describe 'Text Editor' do
     input = ["a"]
     expect(text_editor(input)).to eq(["1: a"])
   end
+
+  it "should return line number and string with 2 lines" do
+    input = ["a", "b"]
+    expect(text_editor(input)).to eq(["1: a", "2: b"])
+  end
 end

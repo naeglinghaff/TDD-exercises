@@ -1,8 +1,10 @@
 def text_editor(input)
   line_no = input.length
+  results = []
   if line_no >= 1
-    ["#{line_no}: #{input[0]}"]
-  else
-    []
+    input.each do | line |
+      results.push("#{input.index(line) + 1}: #{line}")
+    end
   end
+  results
 end
