@@ -141,8 +141,15 @@ domain_name("https://www.cnet.com") == "cnet"
 | "https://www.nothing.com" | "nothing" |
 | "http://zen-desk.com" | "zen-desk" |
 
+### Approach
 
-## Testing text editor kata
+To extract the main bulk of the domain names I split the string on the "." value. To map the urls that did not fit this pattern I tested the length of the string as well to determine which part of the array to return.
+
+### Notes for next time
+
+More questions surrounding edge cases would have been beneficial to map out a more comprehensive solution.
+
+## Testing text editor kata - Ruby
 
 ### Task
 
@@ -158,3 +165,14 @@ The numbering starts at 1. The format is n: string. Notice the colon and space i
 | ["a"] | ["1:a"] |
 | ["a", "b"] | ["1:a", "2:b"] |
 | ["a", "b", "c"] | ["1: a", 2: b"], "3: c"]|
+
+
+### Edge cases
+
+It should be able to accept empty strings and long inputs.
+
+### Approach
+
+Using a results array I could push the index of the item + 1 to get the line number and then the item itself using string interpolation.
+
+For edge cases I had to implement a count which could keep a note of how often a blank string had appeared. However, this had limitations. It would only work in cases where there were consecutive blank strings as per the example in the kata. For further edge cases where blank strings were intermingled a different approach would need to be adopted. 
